@@ -1,0 +1,65 @@
+.float {
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.floatAnimation {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    -moz-transform: translate(0px, 5px);
+}
+
+.transRight {
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.RightAnimation {
+    transform: translatex(.5rem);
+    -webkit-transform: translatex(.5rem);
+    -moz-transform: translatex(.5rem);
+    -ms-transform: translatex(.5rem);
+    -o-transform: translatex(.5rem);
+}
+
+.transLeft {
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.LeftAnimation {
+    transform: translatex(-0.5rem);
+    -webkit-transform: translatex(-0.5rem);
+    -moz-transform: translatex(-0.5rem);
+    -ms-transform: translatex(-0.5rem);
+    -o-transform: translatex(-0.5rem);
+}
+
+/* ex  Animations */
+@keyframes pulse{
+    0%{
+      box-shadow:var(--DarkBlue-color) 0 0 0 0;
+    }
+    75%{
+      box-shadow:var(--Dark-color) 0 0 0 16px;
+    }
+  }
+  @keyframes truePulse{
+    0%{
+      box-shadow:var(--primary-color) 0 0 0 0;
+    }
+    75%{
+      box-shadow:var(--Dark-color) 0 0 0 16px;
+    }
+  }
+  @keyframes falsePulse{
+    0%{
+      box-shadow:var(--primaryRed-color) 0 0 0 0;
+    }
+    75%{
+      box-shadow:var(--Dark-color) 0 0 0 16px;
+    }
+  }

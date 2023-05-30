@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript" src="js/lib/jquery.js"></script>
+  <script>
+    $(window).load(function () {
+      $(".loader").fadeOut("slow");
+    });
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <title>sum game</title>
+
+  <link rel="stylesheet" href="css/lib/bootstrap.min.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+  <link rel="stylesheet" href="css/template/p224_ex1.css" type="text/css" />
+  <link rel="stylesheet" href="css/lib/animation.css" type="text/css" />
+
+  <script src="js/lib/jquery_v3.3.1.js"></script>
+
+  <script src="js/lib/bootstrap.min.js"></script>
+
+  <script src="js/lib/underscore-min.js"></script>
+
+  <script src="js/lib/gsap.min.js"></script>
+
+  <style>
+    .loader {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: url("js/lib/preloader.gif") 50% 50% no-repeat rgb(255, 255, 255);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loader"></div>
+  <div id="container">
+    <div class="page_content">
+      <div class="container-fluid p-0">
+        <!-- header start -->
+        <div class="col-xs-12 p-0 header">
+          <div class="boxhead5 headingTitle">
+            <h1 style="
+                  margin: 0;
+                  font-size: 38px;
+                  font-family: Quicksand-Medium;
+                  display: flex;
+                  align-items: center;
+                ">
+              Sub Machine
+            </h1>
+          </div>
+          <div class="box1 title" style="margin-left: 0;">
+            <img src="assets/images/sub-icon.png" class="img-fluid" />
+          </div>
+          <div class="box1">
+            <div class="resourseBtn d-none">
+              <img src="" class="img-fluid" />
+            </div>
+          </div>
+
+          <div class="box1 pull-right helpBtn d-none">
+            <img src="" class="img-fluid" />
+          </div>
+        </div>
+        <audio id="audioPlayer1" preload="auto" src=""></audio>
+        <audio id="audioPlayer2" preload="auto" src=""></audio>
+
+        <section class="col-xs-12 pageContainer">
+          <div class="pageBg col-xs-12"></div>
+          <div class="pageContent col-xs-12">
+            <div id="myCarousel" class="carousel slide col-xs-12 template1_v2" data-ride="carousel" data-interval="0"
+              data-wrap="false" data-id="template1_v2">
+              <div class="carousel-inner">
+                <div class="item first active h-100" data-audioSrc="">
+                  <div class="template1_v2 d-flex flex-column h-100">
+                    <div class="add_container col-xs-12 row px-3">
+                      <div class="questions col-10">
+                        <div class="row justify-content-center">
+                          <div class="col-3 justify-content-center d-flex" style="gap: 25px; padding: 23px 0 0 0">
+                            <img src="./assets/images/p224_ex1/pointer3.gif" class="pointer" alt="" />
+
+                            <div class="joystick_wrapper">
+                              <img src="./assets/images/p224_ex1/jhead.png" id="joystick" alt=""
+                                class="joystick_btn img-fluid hand" />
+                              <img src="./assets/images/p224_ex1/jbody.png" alt="" class="img-fluid body" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6 mx-auto d-flex justify-content-center">
+                            <div class="row justify-content-center w-100 align-items-center equation position-relative">
+                              <div class="position-absolute">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132.415 34.015">
+                                  <path fill="rgb(255 121 5)" stroke="#140000" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="1.215"
+                                    d="M90.327.608a4.854 4.854 0 0 0-4.864 4.864V9.07h-10.55A16.379 16.379 0 0 0 60.588.629 16.379 16.379 0 0 0 46.27 9.07H31.312A16.379 16.379 0 0 0 16.986.629 16.379 16.379 0 0 0 .607 17.008a16.379 16.379 0 0 0 16.379 16.378 16.379 16.379 0 0 0 14.317-8.441H46.27a16.379 16.379 0 0 0 14.318 8.44 16.379 16.379 0 0 0 14.317-8.44h10.558v3.598a4.854 4.854 0 0 0 4.864 4.865h36.616a4.853 4.853 0 0 0 4.864-4.865V5.472a4.853 4.853 0 0 0-4.864-4.864z"
+                                    paint-order="markers fill stroke" />
+                                </svg>
+                              </div>
+                              <div class="col-3 num num1 first_num" style="overflow: hidden; position: relative"
+                                id="first_num">
+                                <div class="cover"></div>
+                                <div class="number"></div>
+                              </div>
+                              <div class="col-1" style="
+                                    z-index: 1;
+                                    font-size: 46px;
+                                    position: relative;
+                                    top: -24px;
+                                    left: -2px;
+                                  ">
+                                _
+                              </div>
+                              <div class="col-3 num num2" style="
+                                    overflow: hidden;
+                                    position: relative;
+                                    left: 11px;
+                                  " id="sec_num">
+                                <div class="cover"></div>
+                                <div class="number">2</div>
+                              </div>
+                              <div class="col-1" style="
+                                    z-index: 1;
+                                    font-size: 46px;
+                                    position: relative;
+                                    top: -4px;
+                                    left: 4px;
+                                  ">
+                                =
+                              </div>
+                              <div class="col-4 num" id="res" style="position: relative; overflow: hidden">
+                                <div class="cover"></div>
+                                <div class="number">2</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-6 px-3" style="
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                              ">
+
+                            <div class="row col-12">
+                              <div class="col-12 num x grid-container first_container" id="left-window"
+                                style="overflow: hidden"></div>
+                            </div>
+                          </div>
+                          <div class="col-6 px-3" style="
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                              ">
+
+                            <div class="row col-12">
+                              <div class="col-12 num x grid-container" id="right-window" style="overflow: hidden"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="answersContainer question notCompleted col-2" data-id="1">
+                        <div class="option" data-audioSrc="assets/audio/incorrect.mp3" id="ans1"
+                          data-Answer="incorrect">
+                          <div class="booleanImage" id="choice-1">1</div>
+                        </div>
+
+                        <div class="option" data-audioSrc="assets/audio/correct.mp3" id="ans2" data-Answer="incorrect">
+                          <div class="booleanImage" id="choice-2">2</div>
+                        </div>
+                        <div class="option" data-audioSrc="assets/audio/incorrect.mp3" id="ans3"
+                          data-Answer="incorrect">
+                          <div class="booleanImage" id="choice-3">3</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-auto px-2">
+                      <div class="d-flex flex-row justify-content-around mt-auto" id="neg-images-bar">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="d-flex flex-row justify-content-around" id="images-bar">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="d-flex flex-row justify-content-around" id="numbers-bar">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                      </div>
+
+                      <!-- 
+                      <div class="answers_wrapper" style="overflow: hidden">
+
+                      </div> -->
+                      <!-- 
+                      <div class="const_wrapper" id="numbers-bar">
+                        <div class="const_num">1</div>
+                        <div class="const_num">2</div>
+                        <div class="const_num">3</div>
+                        <div class="const_num">4</div>
+                        <div class="const_num">5</div>
+                        <div class="const_num">6</div>
+                        <div class="const_num">7</div>
+                        <div class="const_num">8</div>
+                        <div class="const_num">9</div>
+                        <div class="const_num">10</div>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="row">
+          <div class="col-xs-12 footer">
+            <div class="box1">
+              <div title="Restart" class="reloadBtnAll" id="reload">
+                <img src="assets/images/replay_icon.png" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="box3">
+              <div class="audioPlayerContainer" id="audioDragContainer" style="visibility: hidden">
+                <div class="col-xs-12 controlsDiv">
+                  <div class="controlsinline">
+                    <div id="pButton" class="col-xs-1 p-0">
+                      <img src="" class="img-fluid playImg" onClick="fnStartAudio('play');" />
+                      <img src="" class="img-fluid pauseImg" onClick="fnStartAudio('pause');" />
+                    </div>
+                    <div class="col-xs-11" id="audioDrag">
+                      <div class="slidecontainer">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="myRange" step="0.1" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="box1">
+              <div class="reloadBtnScreen">
+                <img src="assets/images/reload_icon.png" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="box2">
+              <div title="Show all answer" class="showAnsBtn disabledBtn disabled" id="show-ans">
+                <img src="assets/images/showAns_icon.png" class="img-fluid" style="filter: hue-rotate(55deg)" />
+              </div>
+            </div>
+
+            <div class="box1">
+              <div class="backBtn">
+                <img src="assets/images/back_icon.png" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="box4">
+              <div class="pageNumber">1 of 4</div>
+            </div>
+
+            <div class="box1">
+              <div class="nextBtn">
+                <img src="assets/images/next_icon.png" class="img-fluid inlineblock" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="helpPopup" style="display: none; visibility: hidden">
+          <div class="helpContainer">
+            <img class="closeBtn" src="" />
+            <div class="col-xs-12" style="
+                  overflow: auto;
+                  width: 100%;
+                  height: 100%;
+                  font-size: 30px;
+                ">
+              <p>Help content goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+      fnSetPlayer();
+      fnTemplate1_v2($("div.active"));
+    });
+  </script>
+  <script type="text/javascript" src="js/template/p224_ex1.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/template/sub.js"></script>
+</body>
+
+</html>

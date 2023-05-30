@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+
+<head>
+  <script src="js/lib//jquery.js"></script>
+  <script>
+    $(window).load(function () {
+      $(".loader").fadeOut("slow");
+    })
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Fishing Game</title>
+
+  <!-- global CSS Starts -->
+  <link rel="stylesheet" href="css/lib/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+  <link rel="stylesheet" href="css/template/p7e8.css" type="text/css" />
+  <style>
+    .loader {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: url('js/lib/preloader.gif') 50% 50% no-repeat rgb(255, 255, 255);
+    }
+  </style>
+
+  <!-- global CSS End -->
+
+  <!-- global JS Starts -->
+  <script src="js/lib/jquery_v3.3.1.js"></script>
+  <script src="js/lib/bootstrap.min.js"></script>
+  <script src="js/lib/underscore-min.js"></script>
+  <!-- global JS End -->
+
+</head>
+
+<body>
+  <div class="loader"></div>
+  <div id="container">
+    <div class="page_content">
+      <audio id="myAudio">
+        <source src="./assets/audio/shark.wav" autoplay="true" muted="true" type="audio/wav">
+      </audio>
+      <!-- <img src="./assets/images/p78e2/12.png" alt="Cursor" class="cursor" /> -->
+      <div class="container-fluid noPadding">
+        <!-- header start -->
+        <div class="col-xs-12 noPadding header">
+          <div class="box1 title hide" data-audioSrc="" onClick="fnTitleAudioClick(this)">
+            <img src="assets/images/audio_icon.png" class="img-responsive" />
+          </div>
+          <!-- <div class="boxhead5 headingTitle pl-zero">
+            <h1 class="boldF">1</h1>
+            <h1 class="boldFs">Listen and choose.</h1>
+          </div> -->
+
+          <h1 class="headerTitle">
+            <span class="titleNo">1</span>
+            Catch words and letters 🐟 to make phrase or words
+
+          </h1>
+
+          <div class="box1">
+            <div class="resourseBtn queBox queBox_1 hide" id="imgBox_1">
+              <div class="clickableBox">
+                <img src="assets/images/resourse_icon.png" style="width:100px;" class="img-responsive"
+                  class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Resource" />
+              </div>
+            </div>
+          </div>
+
+          <div class="box1 pull-right helpBtn hide">
+            <img src="" class="img-responsive" />
+          </div>
+        </div>
+        <audio id="audioPlayer1" preload="auto" src=""></audio>
+        <audio id="audioPlayer2" preload="auto" src=""></audio>
+        <!-- header end -->
+
+        <!-- page start -->
+        <section class="col-xs-12 pageContainer">
+          <div class="pageBg col-xs-12"></div>
+          <div class="pageContent col-xs-12">
+            <div id="myCarousel" class="carousel slide col-xs-12" data-ride="carousel" data-interval="0"
+              data-wrap="false">
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active" data-audioSrc="assets/audio/35_1.mp3">
+                  <div class="gameover inVisible">
+                    <img src="./assets/images/p78e2/giphy.gif" alt="">
+                  </div>
+                  <div class="template1_v1">
+                    <div class="q_header">
+
+
+                      <div class="box sb2">1 - The Sky Is Blue </div>
+                      <!-- <div class="Hook" data-state="pointer">
+                        <img src="./assets/images/p78e2/1x.png" width="60px" height="60px" />
+                      </div> -->
+
+                      <div class="timer">
+
+
+                      </div>
+
+                    </div>
+                    <div class="inputs">
+
+                      <input type="text" value="" readonly="readonly" data-optDataAns="The"
+                        class="form-control current  " id="1">
+                      <input type="text" value="" readonly="readonly" data-optDataAns="Sky" class="form-control" id="2">
+                      <input type="text" value="" readonly="readonly" data-optDataAns="Is" class="form-control" id="3">
+                      <input type="text" value="" readonly="readonly" data-optDataAns="Blue" class="form-control"
+                        id="4">
+
+
+
+
+                    </div>
+
+                    <div class="question question1">
+                      <div class="optContainer editPos4">
+                        <div class="tank ">
+                          <div class="wrapper">
+                            <div class="wave"></div>
+                            <div class="water">
+                              <div class="fish_wrapper option" data-audioSrc="assets/audio/incorrect.mp3"
+                                data-Answer="incorrect">
+                                <div class="fish">
+                                  <div class="fishAns word1">The</div>
+                                </div>
+                              </div>
+                              <div class="fish_wrapper option" data-audioSrc="assets/audio/incorrect.mp3"
+                                data-Answer="incorrect">
+                                <div class="fish">
+                                  <div class="fishAns word2">Sky</div>
+                                </div>
+                              </div>
+                              <div class="fish_wrapper option" data-audioSrc="assets/audio/incorrect.mp3"
+                                data-Answer="incorrect">
+                                <div class="fish">
+                                  <div class="fishAns word3">Is</div>
+                                </div>
+                              </div>
+                              <div class="fish_wrapper option" data-audioSrc="assets/audio/incorrect.mp3"
+                                data-Answer="incorrect">
+                                <div class="fish">
+                                  <div class="fishAns word4">Blue</div>
+                                </div>
+                              </div>
+                              <div class="fish_wrapper shark_wrapper ">
+                                <div class="shark inVisible ">
+                                  <div class="sharkb  inVisible">
+
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+                        </div>
+                      </div>
+
+
+
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="item " data-audioSrc="assets/audio/35_1.mp3">
+                  <div class="gameover inVisible">
+                    <img src="./assets/images/p78e2/giphy.gif" alt="">
+                  </div>
+                  <div class="template1_v1">
+                    <div class="q_header">
+
+
+                      <div class="box sb2">2 - Sun rises in the East </div>
+                      <!-- <div style="display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 52px;
+    top: 258px;">
+                        <div class="Hooks" data-state="pointer">
+                          <img src="./assets/images/p78e2/1x.png" width="60px" height="60px" />
+                        </div>
+                        <div class="Hooks" data-state="pointer">
+                          <img src="./assets/images/p78e2/11.png" width="60px" height="60px" />
+                        </div>
+                        <div class="Hooks" data-state="pointer">
+                          <img src="./assets/images/p78e2/12.png" width="60px" height="60px" />
+                        </div>
+                        <div class="Hooks" data-state="pointer">
+                          <img src="./assets/images/p78e2/sh.png" width="60px" height="60px" />
+                        </div>
+                        <div class="Hooks" data-state="pointer">
+                          <img src="./assets/images/p78e2/pointer.png" width="60px" height="60px" />
+                        </div>
+                      </div> -->
+                      <div class="timer">
+
+
+                      </div>
+
+                    </div>
+                    <div class="inputs">
+
+                      <input type="text" value="" readonly="readonly" data-optDataAns="Sun"
+                        class="form-control current  " id="1">
+                      <input type="text" value="" readonly="readonly" data-optDataAns="rises" class="form-control"
+                        id="2">
+                      <input type="text" value="" readonly="readonly" data-optDataAns="in" class="form-control" id="3">
+                      <input type="text" value="" readonly="readonly" data-optDataAns="the" class="form-control" id="4">
+                      <input type="text" value="" readonly="readonly" data-optDataAns="East" class="form-control"
+                        id="5">
+
+
+
+
+                    </div>
+
+                    <div class="question question2">
+                      <div class="optContainer editPos4">
+                        <div class="tank ">
+                          <div class="wrapper">
+                            <div class="wave"></div>
+                            <div class="water">
+                              <div class="fish_wrapper option" data-audioSrc="assets/audio/incorrect.mp3"
+                                data-Answer="incorrect">
+                                <div class="fish">
+                                  <div class="fishAns word1">Sun</div>
+                                </div>
+                              </div>
+                              <div class="fish_wrapper option" data-audioSrc="assets/audio/incorrect.mp3"
+                                data-Answer="incorrect">
+                                <div class="fish">
+                                  <div class="fishAns word2">rises</div>
+                                </div>
+                              </div>
+                              <div class="fish_wrapper option" data-audioSrc="assets/audio/incorrect.mp3"
+                                data-Answer="incorrect">
+                                <div class="fish">
+                                  <div class="fishAns word3">in</div>
+                                </div>
+                              </div>
+                              <div class="fish_wrapper option" data-audioSrc="assets/audio/incorrect.mp3"
+                                data-Answer="incorrect">
+                                <div class="fish">
+                                  <div class="fishAns word4">the</div>
+                                </div>
+                              </div>
+                              <div class="fish_wrapper option" data-audioSrc="assets/audio/incorrect.mp3"
+                                data-Answer="incorrect">
+                                <div class="fish">
+                                  <div class="fishAns word5">East</div>
+                                </div>
+                              </div>
+                              <div class="fish_wrapper shark_wrapper ">
+                                <div class="shark inVisible ">
+                                  <div class="sharkb  inVisible">
+
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+                        </div>
+                      </div>
+
+
+
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </section>
+        <!-- page end -->
+
+        <!-- footer start -->
+        <div class="row">
+          <div class="col-xs-12 footer">
+            <div class="box1">
+              <div class="backBtn disabled " style="border: 4px solid #f0003c;
+    border-radius: 50%;">
+                <img src="assets/images/back_icon.png" class="img-responsive">
+              </div>
+            </div>
+            <div class="box1">
+              <div class="reloadBtnAll" style="border: 4px solid #f0003c;
+    border-radius: 50%;">
+                <img src="assets/images/resetAnswer.png" class="img-responsive" />
+              </div>
+            </div>
+            <div class="box1">
+              <div class="reloadBtnScreen" style="border: 4px solid #f0003c;
+    border-radius: 50%;">
+                <img src="assets/images/reloadscreen.png" class="img-responsive" />
+              </div>
+            </div>
+
+            <div class="box3 hide">
+              <div class="audioPlayerContainer" id="audioDragContainer">
+                <div class="col-xs-12 controlsDiv">
+                  <div class="controlsinline">
+                    <div id="pButton" class="col-xs-1 noPadding">
+                      <img src="assets/images/play.png" class="img-responsive playImg"
+                        onClick="fnStartAudio('play');" />
+                      <img src="assets/images/pause.png" class="img-responsive pauseImg"
+                        onClick="fnStartAudio('pause');" />
+                    </div>
+                    <div class="col-xs-11" id="audioDrag">
+                      <div class="slidecontainer">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="myRange" step="0.1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="box2">
+              <div class="showAnsBtn" style="border: 4px solid #f0003c;
+    border-radius: 50%;">
+                <img src="assets/images/showAnswer.png" class="img-responsive" />
+              </div>
+            </div>
+
+
+            <div class="box1 " style="    position: relative;
+    left: 445px;">
+              <div class="nextBtn" style="border: 4px solid #f0003c;
+    border-radius: 50%;">
+                <img src="assets/images/next_icon.png" class="img-responsive inlineblock">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- footer end -->
+
+
+        <div class="resoursePopup pagePopup popup_1" style="display: none;">
+          <div class="resourseContainer">
+
+            <div class="pagePopupContainer">
+              <img class="closeBtn" src="assets/images/closeBtn.png" style="width:65px;" class="btn btn-secondary"
+                data-toggle="tooltip" data-placement="top" title="Close">
+              <div class="col-xs-12 noPadding">
+                <div class="popup-content">
+                  <video id="myVideo" class="center-block videoStyle" src="" controls>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="helpPopup" style="display: none;">
+            <div class="helpContainer">
+              <img class="closeBtn" src="assets/images/closeBtn.png">
+              <div class="col-xs-12" style="overflow: auto;width:100%;height:100%;font-size:30px;">
+                <p>Help content goes here.</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="helpPopup" style="display: none;">
+          <div class="helpContainer">
+            <img class="closeBtn" src="assets/images/closeBtn.png">
+            <div class="col-xs-12" style="overflow:
+                        auto;width:100%;height:100%;font-size:30px;">
+              <p>Help content goes here.</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+      fnSetPlayer();
+      fnTemplate1_v1($('div.active'));
+    });
+  </script>
+  <script type="text/javascript" src="js/lib/timer.js"></script>
+  <script type="text/javascript" src="js/template/p7e8.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

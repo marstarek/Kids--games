@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Matching</title>
+
+  <!-- global CSS Starts -->
+  <link rel="stylesheet" href="css/lib/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+  <link rel="stylesheet" href="css/template/p29_ex24.css" type="text/css" />
+
+  <!-- global CSS End -->
+
+  <!-- global JS Starts -->
+  <script src="js/lib/jquery_v3.3.1.js"></script>
+  <script src="js/lib/bootstrap.min.js"></script>
+
+  <script src="js/lib/underscore-min.js"></script>
+  <!-- global JS End -->
+
+  <script type="text/javascript" src="js/xapi/cryptojs_v3.1.2.js"></script>
+  <script type="text/javascript" src="js/xapi/xapiwrapper.min.js"></script>
+  <script type="text/javascript" src="js/xapi/xapi.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="page_content">
+
+      <div class="container-fluid noPadding">
+        <!-- header start -->
+    <div class="col-xs-12 noPadding header" style="height: 124.8px;">
+     
+      <div class="boxhead5 headingTitle">
+        <h1>اختر الظل المناسب للشكل  </h1>
+      </div>
+    
+      <div class="box1">
+        <div class="resourseBtn hide">
+          <img src="assets/images/resourse_icon.png" class="img-responsive">
+        </div>
+      </div>
+    
+      <div class="box1 pull-right helpBtn hide">
+        <img src="assets/images/help_icon.png" class="img-responsive">
+      </div>
+    </div>
+        <audio id="audioPlayer1" preload="auto" src=""></audio>
+        <audio id="audioPlayer2" preload="auto" src=""></audio>
+        <!-- header end -->
+
+        <!-- page start -->
+        <section class="col-xs-12 pageContainer">
+          <div class="pageBg col-xs-12"></div>
+          <div class="pageContent col-xs-12">
+            <div id="myCarousel" class="carousel slide col-xs-12 template3_v1" data-ride="carousel" data-interval="0"
+              data-wrap="false" data-id="template3_v1">
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active containerx " data-audioSrc="">
+               
+                  <div class="itemContainer" style="display:flex;flex-direction: column;">
+
+
+
+
+
+
+
+
+
+                    <div class="list1 row" style="flex-grow:5;align-items: end;flex-direction: row;  justify-content: center; ">
+                      <div class="listContainer option_wrapper opt_1" data-id="1" data-name="السؤال الاول ">
+                        <div class="textNum">
+                          <img src="assets/images/p27e20/1.png" class=" quesImg"></div>
+                        <div class="circle option ">
+                        </div>
+                      </div>
+                      <div class="listContainer option_wrapper opt_2" data-id="2" data-name="السؤال الثاني ">
+                        <div class="textNum"><img src="assets/images/p27e20/2.png" class=" quesImg"></div>
+                        <div class="circle option "></div>
+                      </div>
+                      <div class="listContainer option_wrapper opt_3" data-id="3" data-name="السؤال الثالث ">
+                        <div class="textNum"><img src="assets/images/p27e20/3.png" class=" quesImg"></div>
+                        <div class="circle option "></div>
+                      </div>
+                      <div class="listContainer option_wrapper opt_4" data-id="4" data-name="السؤال الرابع ">
+                        <div class="textNum"><img src="assets/images/p27e20/4.png" class=" quesImg"></div>
+                        <div class="circle option "></div>
+                      </div>
+
+                    </div>
+
+                    <div class="lines row" style="flex-grow: 30;position: relative;flex-direction: row;">
+                      <svg class="line_panel2">
+
+                      </svg>
+
+                    </div>
+                    <div class="list2 row" style="flex-grow: 5;flex-direction: row;  justify-content: center;">
+                      <div class="listContainer question_wrapper  que_1" data-answer-id="3" data-name=" 1">
+                        <div class="circle question "></div>
+                        <div class="textNum"><img src="assets/images/p27e20/5.png" class=" optImg"></div>
+                        <div>
+
+                          <div data-audioSrc="assets/audio/incorrect.mp3" class="showAnswerCrossMark showAns">
+
+                          </div>
+                          <div data-audioSrc="assets/audio/correct.mp3" class="showAnswerTickMark"></div>
+                        </div>
+                      </div>
+
+                      <div class="listContainer question_wrapper que_2" data-answer-id="1,3" data-name=" 2 ">
+                        <div class="circle question  "></div>
+                        <div class="textNum"><img src="assets/images/p27e20/6.png" class=" optImg"></div>
+                        <div>
+                          <div data-audioSrc="assets/audio/incorrect.mp3" class="showAnswerCrossMark showAns"></div>
+                          <div data-audioSrc="assets/audio/correct.mp3" class="showAnswerTickMark"></div>
+                        </div>
+                      </div>
+
+                      <div class="listContainer question_wrapper  que_3" data-answer-id="2" data-name="3  ">
+                        <div class="circle question  "></div>
+                        <div class="textNum"><img src="assets/images/p27e20/7.png" class=" optImg"></div>
+                        <div>
+                          <div data-audioSrc="assets/audio/incorrect.mp3" class="showAnswerCrossMark showAns"></div>
+                          <div data-audioSrc="assets/audio/correct.mp3" class="showAnswerTickMark"></div>
+                        </div>
+                      </div>
+                      <div class="listContainer question_wrapper  que_4" data-answer-id="4"data-name=" 4 ">
+                        <div class="circle question  "></div>
+                        <div class="textNum"><img src="assets/images/p27e20/8.png" class=" optImg"></div>
+                        <div>
+                          <div data-audioSrc="assets/audio/incorrect.mp3" class="showAnswerCrossMark showAns"></div>
+                          <div data-audioSrc="assets/audio/correct.mp3" class="showAnswerTickMark"></div>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- page end -->
+
+        <!-- footer start -->
+        <div class="row">
+          <div class="col-xs-12 footer">
+            <div class="box1">
+              <div class="reloadBtnAll" style="border: 4px solid #f0003c;
+    border-radius: 50%;">
+                <img src="assets/images/replay_icon.png" class="img-responsive" />
+              </div>
+            </div>
+
+            <div class="box3">
+              <div class="audioPlayerContainer" id="audioDragContainer">
+                <div class="col-xs-12 controlsDiv">
+                  <div class="controlsinline">
+                    <div id="pButton" class="col-xs-1 noPadding">
+                      <img src="assets/images/play.png" class="img-responsive playImg"
+                        onClick="fnStartAudio('play');" />
+                      <img src="assets/images/pause.png" class="img-responsive pauseImg"
+                        onClick="fnStartAudio('pause');" />
+                    </div>
+                    <div class="col-xs-11" id="audioDrag">
+                      <div class="slidecontainer">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="myRange" step="0.1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="box1">
+
+              <div class="reloadBtnScreen" style="border: 4px solid #f0003c;
+    border-radius: 50%;">
+                <img src="assets/images/reload_icon.png" class="img-responsive" />
+              </div>
+            </div>
+
+            <div class="box2">
+            
+              <div class="showAnsBtn prevent_event" style="border: 4px solid #f0003c;
+    border-radius: 50%;">
+                <img src="assets/images/showAns_icon.png" class="img-responsive" />
+              </div>
+            </div>
+
+            <!-- HTML !-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="box2">
+              <div class="replay">
+                <button class="button-82-pushable replay_btn  prevent_event" role="button">
+                  <span class="button-82-shadow"></span>
+                  <span class="button-82-edge"></span>
+                  <span class="button-82-front text replay_text">
+                    Check
+                  </span>
+                </button>
+              </div>
+            </div> -->
+
+            <div class="box1">
+              <div class="backBtn">
+                <img src="assets/images/back_icon.png" class="img-responsive" />
+              </div>
+            </div>
+
+            <div class="box4">
+              <div class="pageNumber">1 of 1</div>
+            </div>
+
+            <div class="box1">
+              <div class="nextBtn">
+                <img src="assets/images/next_icon.png" class="img-responsive inlineblock" />
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- footer end -->
+
+
+        <div class="resoursePopup" style="display: none;">
+          <div class="resourseContainer">
+            <img class="closeBtn" src="assets/images/close_icon.png">
+            <div class="col-xs-12 noPadding" style="overflow: auto;width:100%;height:100%;padding:0;">
+              <img src="assets/images/dummy.jpg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="helpPopup" style="display: none;">
+          <div class="helpContainer">
+            <img class="closeBtn" src="assets/images/close_icon.png">
+            <div class="col-xs-12" style="overflow: auto;width:100%;height:100%;font-size:30px;">
+              <p>Help content goes here.</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+      fnSetPlayer();
+      fnTemplate3_v1($('div.active'));
+    });  
+  </script>
+  <script type="text/javascript" src="js/template/p29_ex24.js"></script>
+  <script type="text/javascript" src="js/template/app.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+@import url("./utli_themes/preloader.css");
+@import url("./utli_themes/animation.css");
+@import url("./utli_themes/fonts.css");
+@import url("./utli_themes/audio.css");
+
+:root {
+     --primary-color: #44AF69;
+     --primaryRed-color: #dc3545;
+     --header-footer-bg: #06908f;
+     --border-color: #FCAB10;
+     --body-bg: #a9cac933;
+     --secondary-text: #ffffff;
+     --error-text: #D35269;
+     --Rose-color: #F4B9B8;
+     --Spearmint-color: #85D2D0;
+     --Purple-color: #887BB0;
+     --Blue-color: #41729F;
+     --DarkBlue-color: #274472;
+     --Dark-color: #ff69b400;
+     
+}
+/* Reset CSS */
+*,
+*::before,
+*::after {
+     box-sizing: border-box;
+}
+
+* {
+     margin: 0;
+}
+
+html,
+body {
+     height: 100%;
+     font-family: cairoMedium;
+     background: var(--body-bg);
+}
+
+body {
+     line-height: 1.5;
+     -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+canvas,
+svg {
+     display: block;
+     max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+     font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+     isolation: isolate;
+}
+
+/*End Reset CSS */
+
+
+.main_layout {
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+#EX_layout {
+     position: relative;
+     height: 100%;
+     margin: 0 auto;
+     border-radius: 1.5625rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.Question_header {
+     text-align: center;
+     padding: 16px 0;
+     background: var(--header-footer-bg);
+     border-top-left-radius: 1.5625rem;
+     border-top-right-radius: 1.5625rem;
+     color: var(--secondary-text);
+}
+
+footer {
+     width: -webkit-fill-available;
+     text-align: center;
+     padding: 1rem 0;
+     background: var(--header-footer-bg);
+     border-bottom-left-radius: 1.5625rem;
+     border-bottom-right-radius: 1.5625rem;
+     color: var(--secondary-text);
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+}
+
+.footer_btn {
+     color: var(--secondary-text);
+     padding: 0.1125rem 0.6375rem;
+     border-radius: .875rem;
+     font-weight: bold;
+     border: 0;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+     cursor: pointer;
+}
+
+.check_btn {
+     background-color: var(--primary-color);
+}
+
+.reload_btn, .infoRes_btn {
+     background-color: var(--bs-danger);
+}
+
+.resource_btn {
+     background: var(--DarkBlue-color);
+}
+
+.global_btn {
+     background: var(--Blue-color);
+}
+
+.audioRes_btn {
+     background: var(--border-color);
+}
+
+.resource_btn_wrapper {
+     transition: ease-in-out;
+     -webkit-transition: ease-in-out;
+     -moz-transition: ease-in-out;
+     -ms-transition: ease-in-out;
+     -o-transition: ease-in-out;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+     background: var(--border-color);
+}
+
+[data-duration] {
+     -webkit-animation-duration: 1s;
+     animation-duration: 1s;
+}
+
+.Questions {
+     overflow: auto;
+     flex-grow: 1;
+     background: var(--secondary-text);
+}
+
+.num {
+     pointer-events: none;
+     background: var(--Purple-color);
+}
+
+.prevent_click {
+     opacity: 0.5 !important;
+     pointer-events: none;
+}
+
+@media (width <=480px) {
+
+     .transRight:hover,
+     .transLeft:hover {
+          transform: unset;
+     }
+
+     footer {
+          font-size: 1.5rem !important;
+     }
+
+     .holder.invisible {
+          display: none;
+     }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+     .Questions {
+          overflow: scroll;
+     }
+
+     .Question_title {
+          font-size: 1.1rem;
+     }
+
+     footer {
+          font-size: 1.5rem !important;
+          padding: 11..375rem;
+     }
+
+}
+
+.show {
+     opacity: 1;
+     pointer-events: auto;
+}
+
+.player {
+     display: flex
+}
+
+.modal-header .btn-close {
+     color: var(--secondary-text);
+     background: var(--error-text)
+}
+
+.fixWidthAndHeight .modal-content {
+     border-radius: 1.5625rem;
+}
+
+.modalVideo video {
+     max-height: 70vh;
+}

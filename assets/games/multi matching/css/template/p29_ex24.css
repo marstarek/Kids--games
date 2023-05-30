@@ -1,0 +1,313 @@
+.template3_v1 {
+  font-size: 45px;
+  height: 100%;
+  line-height: 1;
+}
+
+.template3_v1 .circle {
+  /* display: inline-block; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 4px solid #f0003c;
+  z-index: 2;
+}
+
+.template3_v1 .list1 .circle {
+  /* position: absolute;
+  right: -25px;
+  top: 10px; */
+}
+
+.template3_v1 .list2 .circle {
+  /* margin-right: 20px;
+  margin-top: 10px; */
+}
+
+.template3_v1 .selected {
+  background-color: #0fa0c5;
+}
+
+.template3_v1 .line {
+  stroke: #0fa0c5;
+  stroke-width: 4;
+  /* display: none; */
+}
+
+.template3_v1 .list1,
+.lines,
+.list2 {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.template3_v1 .list1,
+
+.list2 {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+}
+
+.template3_v1 .list1 {
+  /* width: 35%; */
+}
+
+.template3_v1 .lines {
+  /* width: 29%; */
+}
+
+.template3_v1 .list2 {
+  /* width: 36%; */
+}
+
+.template3_v1 .listContainer {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+
+
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.template3_v1 .list1 .listContainer {
+gap: 15px;
+}
+
+.template3_v1 .textNum {
+  /* margin-right: 35px; */
+  font-weight: bold;
+}
+
+.template3_v1 .svg_panel {
+  position: absolute;
+  top: 110px;
+  left: 400px;
+  width: 390px;
+  height: 450px;
+}
+
+.template3_v1 .showAnswerTickMark,
+.template3_v1 .showAnswerCrossMark {
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  display: none;
+  /* opacity: 0; */
+  width: 40px;
+}
+
+.template3_v1 .showAnswerTickMark img {
+
+  width: 50px;
+  opacity: 1111
+}
+
+.template3_v1 .showAnswerCrossMark img {
+  width: 40px;
+  opacity: 1111
+}
+
+.template3_v1 .showAnswerCrossMark {
+  animation-name: crossBlinker;
+  animation-duration: 1s;
+  /* opacity: 1;
+  position: absolute;
+  top: -40px; */
+}
+
+.template3_v1 .opt_1 .showAnswerCrossMark {
+  right: 90px;
+}
+
+.template3_v1 .opt_2 .showAnswerCrossMark {
+  right: 130px;
+}
+
+.template3_v1 .opt_3 .showAnswerCrossMark {
+  right: 115px;
+}
+
+.template3_v1 .opt_4 .showAnswerCrossMark {
+  right: 25px;
+}
+
+.template3_v1 .disabled {
+  opacity: 0.6;
+}
+
+@keyframes crossBlinker {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.template3_v1 .line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  animation: dash .5s linear alternate;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*  */
+.containerx {
+  width: 1000px;
+  height: 500px;
+  /* background-color: rgb(151, 223, 199); */
+  margin: 40px auto;
+  position: relative;
+}
+
+
+
+
+
+
+
+.line_panel2 {
+  position: absolute;
+  /*
+  top: 0px;
+  left: 0px; */
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: transform 1s ease-in-out;
+  /* z-index: 3 */
+}
+.template3_v1 .lines {
+  height: 200px;}
+.line {
+  stroke: #000000;
+  stroke-width: 5;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  animation: dash .5s linear alternate;
+  transition: transform 1s ease-in-out
+}
+
+.steps {
+  position: absolute;
+  top: -74px;
+  left: -92.3px;
+  gap: 10px;
+}
+
+.step {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  border: 3px solid #f0003c;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prevent_event {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.replay_btn {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.question_wrapper .textNum {
+  /* padding: 0 0 0 40px; */
+}
+
+.option_wrapper .textNum {
+  /* padding: 0 40px 0 0; */
+}
+
+.listContainer {
+  cursor: pointer;
+}
+.quesImg ,.optImg{
+  width: 219px
+}
+ .c1 {
+  top: 200px;
+  left: 910px;
+}
+
+.pageAudioIcon {
+  background: url(../../assets/images/audio_icon.png) no-repeat;
+  height: 51px;
+  width: 65px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+}
+.audio_icons_container{
+  display:flex
+}
+ .c1 {
+top: 167px;
+  left: 888px;
+}
+
+ .c2 {
+  left: 567px;
+    top: 167px;
+}
+
+ .c3 {
+top: 167px;
+  left: 247px;
+}
+
+ .c4 {
+  top: 166px;
+    left: -71px;
+}
